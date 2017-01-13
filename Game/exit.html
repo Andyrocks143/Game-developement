@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>About Us</title>
+        <center><font face="Lucida Grande" size="30">Our Team</font></center>
+    </head>
+    
+    <body>
+            <canvas id="myCanvas">
+        </canvas>
+        
+        <script>
+            
+            var c=document.getElementById("myCanvas");
+            var ctx=c.getContext("2d");
+            var img = new Image();
+            img.onload = function(){
+                c.width = img.width;
+                c.height = img.height;
+                ctx.drawImage(img, 0, 0, img.width, img.height);
+            }
+            img.src = 'images/anand.jpg';            </script>
+    </body>
+</html>

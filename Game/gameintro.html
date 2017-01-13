@@ -1,0 +1,163 @@
+<html>
+<head>
+<title>Viperzz</title>
+    
+<center>
+    <font face="infected" size="40" color="white" style="center">Viperzz!</font></center>
+    <div id="slideshow">
+        <img src="images/backgroundMain.jpg" class="bgM"/>
+        <img src="images/backgroundMain2.jpg" class="bgM"/>
+        <img src="images/backgroundMain3.jpg" class="bgM"/>
+        <img src="images/backgroundMain4.jpg" class="bgM"/>
+        <img src="images/backgroundMain5.jpg" class="bgM"/>
+    </div>
+    <style type="text/css">
+        #header h1 {
+            margin:5px 5px 0;
+            padding:15px 20px .25em;
+            line-height:1.2em;
+            text-transform:uppercase;
+            letter-spacing:.2em;
+            font: $pagetitlefont;
+        }
+
+        
+        input.groovybutton
+        {
+            font-size:100px;
+            font-family:infected;
+            color:#FFCC00;
+            height:120px;
+            background-color:transparent;
+            border-style:solid;
+            border-color:transparent;
+            border-width:1px;
+            position:relative;
+        }
+        #bgofall{
+            background-image:url('backgroundMain.jpg');
+            background-repeat:no-repeat;
+            background-attachment:relative;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index:-10 !important;
+        }
+        
+        #slideshow, img.bgM{
+            min-height:100%;
+            min-width: 100%;
+            height:auto;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:-9999;
+        }
+        </style>
+   
+    
+ 
+
+    
+    <script language="javascript">
+        
+        function goLite(FRM,BTN)
+        {
+            window.document.forms[FRM].elements[BTN].style.color = "#1166AA";
+            window.document.forms[FRM].elements[BTN].style.backgroundColor = "transparent";
+            window.document.forms[FRM].elements[BTN].style.borderColor = "transparent";
+        }
+        
+        function goDim(FRM,BTN)
+        {
+            window.document.forms[FRM].elements[BTN].style.color = "#FFCC00";
+            window.document.forms[FRM].elements[BTN].style.backgroundColor = "transparent";
+            window.document.forms[FRM].elements[BTN].style.borderColor = "transparent";
+        }
+        
+       
+                
+        </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.cycle.all.js"></script>
+</head>
+
+    
+
+<body>
+    
+<script>
+    $(document).ready(function(){
+                      $('#slideshow').cycle({
+                                            fx: 'fade',
+                                            pause: 1,
+                                            speed:1200,
+                                            timeout:2500
+                                            });
+                      });
+
+function highscore()
+{
+alert("Hello! I am an alert box!");
+}
+</script>
+
+<script>
+function myFunction()
+{
+alert("Hello! I am an alert box!");
+}
+</script>
+</head>
+<body>
+<br><br>
+    <center>
+    <form name="groovyform">
+        <input
+            type="button"
+            name="groovybtn1"
+            class="groovybutton"
+            value="Play"
+            title=""
+            onMouseOver="goLite(this.form.name,this.name)"
+            onMouseOut="goDim(this.form.name,this.name)"
+            onclick="location.href='snakegame.html'" />
+        </form>
+    <form name="groovyform1">
+        <input
+            type="button"
+            name="groovybtn2"
+            class="groovybutton"
+            value="Options"
+            title=""
+            onMouseOver="goLite(this.form.name,this.name)"
+            onMouseOut="goDim(this.form.name,this.name)" />
+    </form>
+            <form name="groovyform3">
+            <input
+                type="button"
+                name="groovybtn4"
+                class="groovybutton"
+                value="High Score"
+                title=""
+                onMouseOver="goLite(this.form.name,this.name)"
+                onMouseOut="goDim(this.form.name,this.name)"
+                onclick="highscore()" />
+            </form>
+
+                <form name="groovyform4">
+            <input
+                type="button"
+                name="groovybtn5"
+                class="groovybutton"
+                value="Exit"
+                title=""
+                onMouseOver="goLite(this.form.name,this.name)"
+                onMouseOut="goDim(this.form.name,this.name)"
+                onclick="location.href='exit.html'" />
+            </form>
+        </center>
+</body>
+</html>
